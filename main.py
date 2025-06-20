@@ -12,7 +12,7 @@ mcp_client = MultiServerMCPClient(
     {
         "maths-mcp": {
             "command": "python",
-            "args": ["/home/aditya/development/First-MCP/MCP-SERVERS/math-mcp.py"],
+            "args": [os.path.join(os.getcwd(), "MCP-SERVERS", "math-mcp.py")],
             "transport": "stdio",
         },
         "weather-mcp": {
@@ -47,7 +47,7 @@ async def call():
         conversation_history.append(HumanMessage(content=user_input))
         # Pass the full conversation history to the agent
         response = await agent.ainvoke(
-            {"messages": [msg.dict() for msg in conversation_history]},
+            {"messages": [msg.model_dump() for msg in conversation_history]},
         )
 
         # Add the agent's response to the conversation history
