@@ -155,6 +155,7 @@ dependencies = [
     { name = "langchain-mcp-adapters" },
     { name = "langgraph" },
     { name = "mcp" },
+    { name = "requests" },
 ]
 
 [package.metadata]
@@ -163,6 +164,7 @@ requires-dist = [
     { name = "langchain-mcp-adapters", specifier = ">=0.1.7" },
     { name = "langgraph", specifier = ">=0.4.8" },
     { name = "mcp", specifier = ">=1.9.4" },
+    { name = "requests", specifier = ">=2.32.4" },
 ]
 
 [[package]]
