@@ -18,6 +18,11 @@ mcp_client = MultiServerMCPClient(
         "weather-mcp": {
             "url": "http://localhost:8000/mcp",
             "transport": "streamable_http",
+        },
+        "execute-shell-mcp": {
+            "command": "python",
+            "args": [os.path.join(os.getcwd(), "MCP-SERVERS", "execute-shell-mcp.py")],
+            "transport": "stdio",
         }
     } # type: ignore
 )
@@ -29,7 +34,7 @@ async def call():
     tools = await mcp_client.get_tools()
     model = ChatGoogleGenerativeAI(
         model="gemini-2.5-flash",
-        google_api_key=os.getenv("GOOGLE_API_KEY")
+        google_api_key=os.getenv("GEMINI_API_KEY")
     )
 
     agent = create_react_agent(
