@@ -8,6 +8,7 @@ dependencies = [
     "fastapi>=0.119.0",
     "fastapi-mcp>=0.4.0",
     "fastmcp>=2.12.5",
+    "feedparser>=6.0.12",
     "langchain-google-genai>=2.1.5",
     "langchain-mcp-adapters>=0.1.7",
     "langgraph>=0.4.8",
