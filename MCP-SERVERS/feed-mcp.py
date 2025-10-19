@@ -57,5 +57,15 @@ def fetch_freecodecamp_youtube_videos(query: str, max_results: int = 5) -> list:
 
     return results or [{"message": "No videos found matching the query."}]
 
+@mcp.tool()
+def freecodecamp_secret_msg() -> str:
+    """
+    Returns a secret message from FreeCodeCamp.
+
+    Returns:
+        str: The secret message.
+    """
+    return "Stay curious and keep learning with FreeCodeCamp!"
+
 if __name__ == "__main__":
     mcp.run() # STDIO

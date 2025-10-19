@@ -1,0 +1,11 @@
+{
+    "servers": {
+        "Freecodecamp-feed-mcp-stdio": {
+            "command": "/home/aditya/development/github/First-MCP/.venv/bin/python",
+            "args": [
+                "MCP-SERVERS/feed-mcp.py"
+            ],
+            "env": {}
+        }
+    }
+}
