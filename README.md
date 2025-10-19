@@ -174,6 +174,9 @@ You can inspect MCP server responses and requests following interface:
 ```shell
 # For STDIO based MCP server
  npx @modelcontextprotocol/inspector python MCP-SERVERS/fastmcp-calculator.py
+
+# For HTTP based MCP server
+ npx @modelcontextprotocol/inspector http://localhost:8005/mcp
 ```
 
 ## Contributing

@@ -1,5 +1,6 @@
 # HTTP MCP Server 
 from fastapi import FastAPI
+from fastapi_mcp import FastApiMCP
 
 app = FastAPI(
     title="Calculator MCP Server (HTTP Based)",
@@ -55,6 +56,8 @@ def divide(a: float, b: float) -> dict:
         return {"error": "Division by zero is not allowed."}
     return {"result": a / b}
 
+mcp = FastApiMCP(app, name="Calculator MCP")
+mcp.mount_http(mount_path="/mcp")
 
 if __name__ == "__main__":
     import uvicorn
