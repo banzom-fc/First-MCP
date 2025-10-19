@@ -4,7 +4,6 @@ from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP(
     name="weather-mcp",
-    description="MCP Server for weather data of the world",
 )
 
 @mcp.tool(name="get_weather", description="Get the current weather for a given city")
