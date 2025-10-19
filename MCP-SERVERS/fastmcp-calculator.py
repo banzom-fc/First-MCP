@@ -43,4 +43,8 @@ def add(a: float, b: float) -> float:
 
 
 if __name__ == "__main__":
-    mcp.run() # STDIO by default
+    # mcp.run() # STDIO by default
+    
+    # OR
+    
+    mcp.run(transport="streamable-http", host="0.0.0.0", port=8006) # HTTP server
