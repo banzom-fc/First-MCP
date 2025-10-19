@@ -2,7 +2,6 @@ from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP(
     name="Maths MCP",
-    description="MCP Server for mathematical operations",
 )
 
 @mcp.tool(name="add", description="Add two numbers")

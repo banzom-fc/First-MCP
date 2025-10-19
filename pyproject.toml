@@ -5,6 +5,7 @@ description = "This Contain my First Basic MCP Agent with Gemini"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "fastmcp>=2.12.5",
     "langchain-google-genai>=2.1.5",
     "langchain-mcp-adapters>=0.1.7",
     "langgraph>=0.4.8",
